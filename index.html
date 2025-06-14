@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jama Medical Equipment</title>
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===================== NAVIGATION BAR ===================== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#hero">
+          <h1>JME</h1>
+        </a> 
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Equipment</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- Hamburger menu for mobile -->
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero" id="hero">
+    <!-- Logo in the corner -->
+    <img src="images/logo2.png" alt="Jama Medical Equipment Logo" class="hero-logo-corner animate-fade-in" />
+    <div class="hero-flex">
+      <div class="hero-left">
+        <div class="hero-content animate-fade-in">
+          <h1 class="animate-slide-up">Trusted Equipment <br> Compassionate Service</h1>
+          <p class="hero-sub animate-slide-up-delay">Expert respiratory care, fast delivery, and compassionate <br> service for your home medical needs.</p>
+          <!-- Button to open consultation modal -->
+          <a href="#" class="hero-btn animate-slide-up-delay-2" id="openConsultationModal">Book a Consultation</a>
+        </div>
+        <img src="images/marketing.png" alt="Marketing Image" class="marketing-img animate-slide-up-delay-3" />
+      </div>
+    </div>
+    <div class="hero-image animate-fade-in-delay">
+      <img src="images/landingPage11.png" alt="Medical Equipment - Jama Medical Equipment" class="landing-hero-img" />
+    </div>
+    <div class="hero-background"></div>
+  </section>
+
+  <!-- ===================== IMAGE SLIDESHOW SECTION ===================== -->
+  <section class="slideshow-section">
+    <h2 class="slideshow-title">Shop Now</h2>
+    <div class="slideshow-container">
+      <div class="slideshow-track">
+        <!-- Slideshow images (duplicated for seamless loop) -->
+        <div class="slide">
+          <img src="images/cpap.png" alt="CPAP Mask - Jama Medical Equipment" />
+        </div>
+        <div class="slide">
+          <img src="images/image1.png" alt="Jama Medical Equipment Business 1" />
+        </div>
+        <div class="slide">
+          <img src="images/image2.png" alt="Jama Medical Equipment Business 2" />
+        </div>
+        <div class="slide">
+          <img src="images/image3.png" alt="Jama Medical Equipment Business 3" />
+        </div>
+        <div class="slide">
+          <img src="images/image4.png" alt="Jama Medical Equipment Business 4" />
+        </div>
+        <div class="slide">
+          <img src="images/crutch.png" alt="Jama Medical Equipment Business 5" />
+        </div>
+        <!-- Duplicate slides for seamless looping -->
+        <div class="slide">
+          <img src="images/cpap.png" alt="CPAP Mask - Jama Medical Equipment" />
+        </div>
+        <div class="slide">
+          <img src="images/image1.png" alt="Jama Medical Equipment Business 1" />
+        </div>
+        <div class="slide">
+          <img src="images/image2.png" alt="Jama Medical Equipment Business 2" />
+        </div>
+        <div class="slide">
+          <img src="images/image3.png" alt="Jama Medical Equipment Business 3" />
+        </div>
+        <div class="slide">
+          <img src="images/image4.png" alt="Jama Medical Equipment Business 4" />
+        </div>
+        <div class="slide">
+          <img src="images/image5.png" alt="Jama Medical Equipment Business 5" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <div class="about-header">
+        <h2>About Jama Medical Equipment</h2>
+        <p class="tagline"><strong>Locally owned. Clinically trusted. Community focused.</strong></p>
+      </div>
+      <div class="about-grid">
+        <!-- About cards -->
+        <div class="about-card">
+          <div class="about-icon">🏥</div>
+          <h3>Who We Are</h3>
+          <p>Jama Medical Equipment LLC (JME) is a trusted provider of high-quality Durable Medical Equipment (DME) located in Des Plaines, Illinois. We specialize in respiratory care and home medical solutions that improve the quality of life for patients and caregivers alike.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">👨‍⚕️</div>
+          <h3>Our Expertise</h3>
+          <p>Founded and operated by a licensed respiratory therapist, our business was built on a commitment to compassionate service, fast delivery, and expert guidance. From sleep therapy devices and oxygen concentrators to mobility aids and hospital beds, we ensure our clients receive the most reliable equipment — when and where they need it.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🤝</div>
+          <h3>Our Process</h3>
+          <p>We work directly with healthcare providers to ensure every patient receives personalized attention and the equipment that best fits their clinical needs. Our streamlined process minimizes wait times and maximizes comfort at home.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">⭐</div>
+          <h3>Quality & Standards</h3>
+          <p>As a fully accredited DME provider, JME adheres to the highest industry standards and compliance practices. Our team is trained to educate patients and caregivers on proper equipment use and maintenance to promote safe, independent living.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EQUIPMENT/SERVICES SECTION ===================== -->
+  <section class="services" id="services">
+    <h2>Our Equipment</h2>
+    <div class="card-container">
+      <!-- Equipment cards (no flip, no description) -->
+      <div class="card">
+        <img src="images/cpap.png" alt="CPAP/BiPAP" />
+        <h3>AirSense 10 Series</h3>
+      </div>
+      <div class="card">
+        <img src="images/airsense11.png" alt="Oxygen Concentrators" />
+        <h3>AirSense 11 Series</h3>
+      </div>
+      <div class="card">
+        <img src="images/nebulizer.png" alt="Nebulizers" />
+        <h3>Nebulizers</h3>
+      </div>
+      <div class="card">
+        <img src="images/crutch.png" alt="Hospital Beds" />
+        <h3>Crutches</h3>
+      </div>
+      <div class="card">
+        <img src="images/image3.png" alt="Wheelchairs" />
+        <h3>Wheelchairs</h3>
+      </div>
+      <div class="card">
+        <img src="images/image4.png" alt="Walkers & Canes" />
+        <h3>Walkers</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section class="contact" id="contact">
+    <div class="contact-content">
+      <h2>Contact Us</h2>
+      <div class="contact-info-panel">
+        <div class="contact-details">
+          <h3>Get in Touch</h3>
+          <p><strong>Address:</strong> 2344 E Dempster St Ste 207, Des Plaines, IL 60016</p>
+          <p><strong>Phone:</strong> <a href="tel:2245802168">(224) 580-2168</a></p>
+          <p><strong>Fax:</strong> <a href="tel:2244434392">(224) 443-4392</a></p>
+          <p><strong>Email:</strong> <a href="mailto:Jme@jamamedical.com">Jme@jamamedical.com</a></p>
+        </div>
+        <!-- Contact form (Formspree) -->
+        <form action="https://formspree.io/f/mjkrbzwe" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">JME</div>
+        <p>Empowering Health. Supporting Independence.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Equipment</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <p>2344 E Dempster St Ste 207, Des Plaines, IL 60016</p>
+        <p>Phone: <a href="tel:2245802168">(224) 580-2168</a></p>
+        <p>Email: <a href="mailto:Jme@jamamedical.com">Jme@jamamedical.com</a></p>
+      </div>
+      <div class="socials">
+        <a href="#"><img src="/assets/icons/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="/assets/icons/instagram.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/saed-mohamud-b97535280/"><img src="/assets/icons/linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Jama Medical Equipment LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== CONSULTATION BOOKING MODAL ===================== -->
+  <div id="consultationModal" class="modal-overlay" style="display:none;">
+    <div class="modal-content">
+      <span class="close-modal" id="closeConsultationModal">&times;</span>
+      <h2>Book a Consultation</h2>
+      <form id="consultationForm">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required pattern="[0-9\-\+\s\(\)]{7,}" />
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+        <div class="form-group">
+          <label for="appointmentDate">Choose a Day</label>
+          <input type="date" id="appointmentDate" name="appointmentDate" required />
+        </div>
+        <div class="form-group">
+          <label for="appointmentTime">Choose a Time</label>
+          <select id="appointmentTime" name="appointmentTime" required>
+            <option value="">Select a time</option>
+            <option value="09:00 AM">09:00 AM</option>
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="12:00 PM">12:00 PM</option>
+            <option value="01:00 PM">01:00 PM</option>
+            <option value="02:00 PM">02:00 PM</option>
+            <option value="03:00 PM">03:00 PM</option>
+            <option value="04:00 PM">04:00 PM</option>
+          </select>
+        </div>
+        <button type="submit" class="modal-submit-btn">Submit Appointment</button>
+      </form>
+      <div id="consultationSuccess" style="display:none; margin-top:1.5rem; color:green; font-weight:bold; text-align:center;">Thank you! Your appointment has been submitted.</div>
+    </div>
+  </div>
+  <!-- Main JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
