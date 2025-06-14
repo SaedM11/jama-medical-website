@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
 
       // Google Sheets integration endpoint (Google Apps Script Web App)
-      const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxzcZI02eVdRsnVg3bAYrSBDUCqp9MpkzH3ObJbhahPAqFMOgAcpXoKWJJHhI9a3Vlo6SQ/exec";
+      const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyevTy9fAKgK-LVVNrA3jY5qBPsXtrgaXbVgK96xppnLyW2J0BT2AqRyUp1byveT0YvA/exec";
       
       // Send data to Google Sheets
       fetch(SHEETS_URL, {
