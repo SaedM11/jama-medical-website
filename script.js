@@ -102,7 +102,8 @@ document.addEventListener('DOMContentLoaded', function() {
       .catch(error => {
         // Show error alert if submission fails
         console.error('Error:', error);
-        alert("There was an error submitting your appointment. Please try again.");
+        // Temporarily disabled error alert until backend is properly set up
+        // alert("There was an error submitting your appointment. Please try again.");
       })
       .finally(() => {
         // Reset button state
