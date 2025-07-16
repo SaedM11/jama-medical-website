@@ -49,8 +49,8 @@ jama-medical-website/
 For any inquiries, please contact:
 - Email: Jme@jamamedical.com
 - Phone: (224) 580-2168
-- Address: 2344 E Dempster St Ste 207, Des Plaines, IL 60016
+- Address: 2434 E Dempster St Ste 207, Des Plaines, IL 60016
 
 ## License
 
-© 2024 Jama Medical Equipment LLC. All rights reserved. 
+© 2025 Jama Medical Equipment LLC. All rights reserved. 

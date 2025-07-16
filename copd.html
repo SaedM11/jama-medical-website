@@ -10,71 +10,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .page-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 120px 20px 60px;
-      text-align: center;
-    }
-    .page-content h1 {
-      font-size: 3rem;
-      color: #1e3a8a;
-      margin-bottom: 2rem;
-      font-family: 'Poetsen One', sans-serif;
-    }
+    html { scroll-behavior: smooth; }
+    .navbar-header { position: relative; z-index: 1000; }
+    .nav-dropdown { position: relative; }
+    .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: linear-gradient(to right, #023e7d, #0353a4); min-width: 500px; padding: 2rem; border-radius: 0 0 12px 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); z-index: 999; margin-top: 0; border-top: 2px solid rgba(255, 255, 255, 0.1); }
+    .nav-dropdown:hover .dropdown-content { display: flex; gap: 3rem; }
+    .dropdown-section { flex: 1; }
+    .dropdown-section h4 { color: rgba(255, 255, 255, 0.95); font-size: 1rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(255, 255, 255, 0.2); font-family: 'Roboto', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; }
+    .dropdown-section a { display: block; color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 0.95rem; font-weight: 400; padding: 0.6rem 0; transition: all 0.2s ease; border-radius: 4px; padding-left: 0.5rem; margin-left: -0.5rem; }
+    .dropdown-section a:hover { color: #ffffff; background: rgba(255, 255, 255, 0.1); transform: translateX(6px); padding-left: 1rem; }
+    .nav-dropdown:nth-child(2) .dropdown-content { min-width: 280px; justify-content: center; }
+    @media (max-width: 768px) { .dropdown-content { position: static; width: 100%; transform: none; left: 0; margin: 0.5rem 0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); flex-direction: column; gap: 1.5rem; min-width: auto; } .nav-dropdown:hover .dropdown-content { display: flex; } }
   </style>
 </head>
-<body>
-  <header>
+<body class="blog-page">
+  <header class="navbar-header">
     <nav class="navbar">
-      <div class="logo">
-        <a href="index.html#hero">
-          <h1>JME</h1>
-        </a> 
-      </div>
+      <div class="logo"><a href="index.html#hero"><h1>JME</h1></a></div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html#hero">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
+        <li class="nav-dropdown"><a href="index.html#about">About</a><div class="dropdown-content"><div class="dropdown-section"><h4>Learn More</h4><a href="about.html">Our Story & Blog</a></div></div></li>
+        <li class="nav-dropdown"><a href="index.html#services">Services</a><div class="dropdown-content"><div class="dropdown-section"><h4>Respiratory Therapy</h4><a href="ventilator.html">Ventilator Therapy</a><a href="sleep-apnea.html">Sleep Apnea Therapy</a><a href="oxygen.html">Oxygen Therapy</a></div><div class="dropdown-section"><h4>Why Choose JME?</h4><a href="index.html#about">Licensed Respiratory Therapist</a><a href="index.html#contact">Fast Local Delivery</a><a href="index.html#services">Medicare Certified</a></div></div></li>
         <li><a href="index.html#services">Equipment</a></li>
-        <li><a href="#">Patient Resources</a></li>
+        <li class="nav-dropdown"><a href="#" onclick="return false;">Patient Resources</a><div class="dropdown-content"><div class="dropdown-section"><h4>Educational Resources</h4><a href="sleep-info.html">What is Sleep Apnea?</a><a href="copd.html">COPD & Asthma Management</a></div><div class="dropdown-section"><h4>Getting Started</h4><a href="index.html#contact">Book a Consultation</a><a href="index.html#contact">Insurance & Medicare</a></div></div></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <div class="hamburger" id="hamburger">☰</div>
     </nav>
   </header>
 
-  <main class="page-content">
-    <h1>COPD / Asthma</h1>
-    <p>COPD and asthma management resources and equipment information coming soon.</p>
+  <!-- ===================== HERO SECTION ===================== -->
+  <div style="display: flex; flex-wrap: wrap; width: 100%; height: 500px; margin: 0; padding: 0; overflow-x: hidden; box-sizing: border-box;">
+    <img src="images/copd.jpg" alt="COPD Management 1" style="width: 33.333%; height: 500px; object-fit: cover; object-position: center top; margin: 0; padding: 0; border: none; box-sizing: border-box;" />
+    <img src="images/copd1.jpg" alt="COPD Management 2" style="width: 33.333%; height: 500px; object-fit: cover; object-position: center top; margin: 0; padding: 0; border: none; box-sizing: border-box;" />
+    <img src="images/copd2.jpg" alt="COPD Management 3" style="width: 33.333%; height: 500px; object-fit: cover; object-position: center top; margin: 0; padding: 0; border: none; box-sizing: border-box;" />
+  </div>
+
+  <main class="blog-content">
+    <h1>COPD & Asthma Management</h1>
+    <h2>Resources for Better Respiratory Health</h2>
+
+    <p>Comprehensive information and resources for managing COPD (Chronic Obstructive Pulmonary Disease) and asthma. Learn about treatment options, equipment, and lifestyle strategies for better breathing. Both conditions are chronic respiratory diseases that require ongoing management and proper equipment for optimal quality of life.</p>
+
+    <p>COPD is a progressive lung disease that makes it difficult to breathe, typically caused by long-term exposure to irritating gases or particulate matter. Asthma is a condition in which airways narrow and swell, producing extra mucus and making breathing difficult. Both conditions benefit from proper medication management, respiratory therapy, and supportive equipment.</p>
+
+    <p>Our respiratory therapy specialists provide expert guidance on nebulizer therapy, oxygen concentrators, and other essential equipment to help you manage your respiratory condition effectively. We offer comprehensive education on proper inhaler techniques, breathing exercises, and environmental modifications that can improve your symptoms and quality of life.</p>
+
+    <p>Management strategies include medication adherence, avoiding triggers, regular monitoring with peak flow meters, pulmonary rehabilitation, oxygen therapy when prescribed, and having an action plan for exacerbations. Our team works closely with your pulmonologist to ensure you have the right equipment and knowledge to manage your condition successfully.</p>
+
+    <hr>
+
+    <h3>Ready to Get Started?</h3>
+    <p>Contact Jama Medical Equipment today to learn how our respiratory therapy specialists can help you better manage your COPD or asthma with the right equipment and expert guidance.</p>
+
+    <p>📍 2434 E Dempster St Ste 207, Des Plaines, IL 60016</p>
+    <p>📞 Phone: (224) 580-2168</p>
+    <p>✉️ Email: Jme@jamamedical.com</p>
   </main>
 
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-brand">
-        <div class="logo">JME</div>
-        <p>Empowering Health. Supporting Independence.</p>
-      </div>
-      <div class="footer-links">
-        <a href="index.html#hero">Home</a>
-        <a href="about.html">About</a>
-        <a href="index.html#services">Equipment</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-      <div class="footer-contact">
-        <p>2344 E Dempster St Ste 207, Des Plaines, IL 60016</p>
-        <p>Phone: <a href="tel:2245802168">(224) 580-2168</a></p>
-        <p>Email: <a href="mailto:Jme@jamamedical.com">Jme@jamamedical.com</a></p>
-      </div>
+      <div class="footer-brand"><div class="logo">JME</div><p>Empowering Health. Supporting Independence.</p></div>
+      <div class="footer-links"><a href="index.html#hero">Home</a><a href="about.html">About</a><a href="index.html#services">Equipment</a><a href="index.html#contact">Contact</a></div>
+      <div class="footer-contact"><p>2434 E Dempster St Ste 207, Des Plaines, IL 60016</p><p>Phone: <a href="tel:2245802168">(224) 580-2168</a></p><p>Email: <a href="mailto:Jme@jamamedical.com">Jme@jamamedical.com</a></p></div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Jama Medical Equipment LLC. All rights reserved.</p>
-    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Jama Medical Equipment LLC. All rights reserved.</p></div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
