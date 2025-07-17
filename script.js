@@ -30,9 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeModalBtn = document.getElementById('closeConsultationModal');
   const consultationForm = document.getElementById('consultationForm');
   const consultationSuccess = document.getElementById('consultationSuccess');
+  const consultationConfirmation = document.getElementById('consultationConfirmation');
 
   // Only run if all modal elements exist
-  if (openModalBtn && modalOverlay && closeModalBtn && consultationForm && consultationSuccess) {
+  if (openModalBtn && modalOverlay && closeModalBtn && consultationForm && consultationSuccess && consultationConfirmation) {
     // Open modal on button click
     openModalBtn.addEventListener('click', function(e) {
       e.preventDefault();
@@ -87,13 +88,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show success message if submission is successful
         if (result.result === 'success') {
           consultationForm.style.display = 'none';
-          consultationSuccess.style.display = 'block';
+          consultationConfirmation.style.display = 'block';
           setTimeout(() => {
             modalOverlay.style.display = 'none';
             document.body.style.overflow = '';
             consultationForm.reset();
             consultationForm.style.display = 'flex';
-            consultationSuccess.style.display = 'none';
+            consultationConfirmation.style.display = 'none';
           }, 2500);
         } else {
           throw new Error(result.error || 'Submission failed');

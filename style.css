@@ -18,7 +18,7 @@ body {
   );
   color: #001845;
   line-height: 1.6;
-  padding-top: 68px;
+  padding-top: 58px;
   min-height: 100vh;
 }
 
@@ -34,20 +34,22 @@ body {
 /* ----------- NAVBAR STYLES ----------- */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background: linear-gradient(to right, #023e7d, #0353a4);
   color: #fff;
-  padding: 1rem 2.5rem;
+  padding: 0.6rem 2.5rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 80px;
   z-index: 1000;
   box-shadow: 0 2px 12px rgba(4,102,200,0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: visible;
 }
 
 .logo {
@@ -61,30 +63,19 @@ body {
   text-decoration: none;
 }
 
-.logo-img {
-  height: 40px;
+.logo img {
+  height: 64px;
   width: auto;
+  max-width: 220px;
+  display: block;
+  padding: 0 1rem;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
-.logo:hover .logo-img {
+.logo:hover img {
   transform: scale(1.05);
-}
-
-.logo h1 {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-.logo:hover h1 {
-  transform: scale(1.05);
-  color: #0466c8;
+  opacity: 0.9;
 }
 
 .nav-links {
@@ -148,7 +139,7 @@ body {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  margin-left: 1.5rem;
+  margin-left: auto;
   transition: all 0.3s ease;
 }
 
@@ -159,7 +150,7 @@ body {
 /* ----------- MOBILE NAVBAR ----------- */
 @media (max-width: 900px) {
   .navbar {
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.5rem;
   }
   
   .nav-links {
@@ -169,6 +160,13 @@ body {
   .nav-cta {
     margin-left: 1rem;
     padding: 0.7rem 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 48px;
+    max-width: 180px;
   }
 }
 
@@ -185,6 +183,7 @@ body {
     box-shadow: 0 4px 16px rgba(4,102,200,0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    justify-content: flex-start;
   }
   
   .nav-links.active {
@@ -213,8 +212,9 @@ body {
     display: none;
   }
   
-  .logo-img {
-    height: 35px;
+  .logo img {
+    height: 40px;
+    max-width: 160px;
   }
 }
 
@@ -264,6 +264,85 @@ body {
   opacity: 0;
 }
 
+/* ----------- 3-IMAGE HORIZONTAL BANNER ----------- */
+.image-banner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border-bottom: 1px solid rgba(4, 102, 200, 0.1);
+}
+
+.image-banner-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  height: 350px;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.image-banner-item {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.image-banner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.image-banner-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive design for image banner */
+@media (max-width: 1024px) {
+  .image-banner-container {
+    grid-template-columns: 1fr 1fr;
+    height: 300px;
+  }
+  
+  .image-banner-item:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+  
+  .hero {
+    min-height: calc(100vh - 360px);
+  }
+}
+
+@media (max-width: 768px) {
+  .image-banner-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .image-banner-item {
+    height: 250px;
+  }
+  
+  .image-banner-item:nth-child(3) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-banner-item {
+    height: 200px;
+  }
+}
+
 /* ----------- HERO SECTION ----------- */
 .hero {
   position: relative;
@@ -271,8 +350,8 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: 6rem 4vw 4rem 4vw;
-  min-height: 100vh;
+  padding: 1rem 4vw 2rem 4vw;
+  min-height: calc(100vh - 410px);
   background: transparent;
   border-bottom: none;
   box-shadow: none;
@@ -467,14 +546,14 @@ body {
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
-    min-height: 50vh;
-    padding: 2.5rem 2vw 1.5rem 2vw;
+    min-height: calc(100vh - 460px);
+    padding: 1rem 2vw 1rem 2vw;
   }
   .hero-content {
     max-width: 100vw;
     text-align: center;
     z-index: 2;
-    margin-top: 3.5rem;
+    margin-top: 0.5rem;
   }
   .hero-image {
     position: static;
@@ -766,11 +845,22 @@ body {
 }
 
 .footer-logo {
-  color: #0466c8;
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: 'Poetsen One', sans-serif;
   margin-bottom: 0.5rem;
+}
+
+.footer-logo img {
+  height: 48px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* Footer brand logo styles for standalone pages */
+.footer-brand .logo img {
+  height: 48px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
 }
 
 .footer-tagline {
