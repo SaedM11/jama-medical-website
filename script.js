@@ -29,11 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const modalOverlay = document.getElementById('consultationModal');
   const closeModalBtn = document.getElementById('closeConsultationModal');
   const consultationForm = document.getElementById('consultationForm');
-  const consultationSuccess = document.getElementById('consultationSuccess');
-  const consultationConfirmation = document.getElementById('consultationConfirmation');
+  const confirmationMessage = document.getElementById('confirmation-message');
 
   // Only run if all modal elements exist
-  if (openModalBtn && modalOverlay && closeModalBtn && consultationForm && consultationSuccess && consultationConfirmation) {
+  if (openModalBtn && modalOverlay && closeModalBtn && consultationForm && confirmationMessage) {
     // Open modal on button click
     openModalBtn.addEventListener('click', function(e) {
       e.preventDefault();
@@ -62,55 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
       submitButton.textContent = 'Submitting...';
       submitButton.disabled = true;
 
-      // Collect form data
-      const data = {
-        firstName: consultationForm.firstName.value.trim(),
-        lastName: consultationForm.lastName.value.trim(),
-        phone: consultationForm.phone.value.trim(),
-        dob: consultationForm.dob.value,
-        appointmentDate: consultationForm.appointmentDate.value,
-        appointmentTime: consultationForm.appointmentTime.value
-      };
-
-      // Google Sheets integration endpoint (Google Apps Script Web App)
-      const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyevTy9fAKgK-LVVNrA3jY5qBPsXtrgaXbVgK96xppnLyW2J0BT2AqRyUp1byveT0YvA/exec";
-      
-      // Send data to Google Sheets
-      fetch(SHEETS_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      })
-      .then(response => response.json())
-      .then(result => {
-        // Show success message if submission is successful
-        if (result.result === 'success') {
-          consultationForm.style.display = 'none';
-          consultationConfirmation.style.display = 'block';
-          setTimeout(() => {
-            modalOverlay.style.display = 'none';
-            document.body.style.overflow = '';
-            consultationForm.reset();
-            consultationForm.style.display = 'flex';
-            consultationConfirmation.style.display = 'none';
-          }, 2500);
-        } else {
-          throw new Error(result.error || 'Submission failed');
-        }
-      })
-      .catch(error => {
-        // Show error alert if submission fails
-        console.error('Error:', error);
-        // Temporarily disabled error alert until backend is properly set up
-        // alert("There was an error submitting your appointment. Please try again.");
-      })
-      .finally(() => {
-        // Reset button state
+      // Simulate successful submission
+      setTimeout(() => {
+        // Show confirmation message
+        confirmationMessage.classList.add('show');
+        
+        // Reset form
+        consultationForm.reset();
+        
+        // Revert button state
         submitButton.textContent = originalButtonText;
         submitButton.disabled = false;
-      });
+        
+        // Auto-close modal after 2.5 seconds
+        setTimeout(() => {
+          confirmationMessage.classList.remove('show');
+          closeModalBtn.click();
+        }, 2500);
+      }, 1000);
     });
   }
 });

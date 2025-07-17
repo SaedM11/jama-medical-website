@@ -1523,6 +1523,19 @@ img[src*="landingPage10.png"] {
   transform: translateY(-2px) scale(1.03);
 }
 
+.confirmation-message {
+  display: none;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.confirmation-message.show {
+  display: block;
+}
+
 @media (max-width: 600px) {
   .modal-content {
     padding: 1.2rem 0.5rem 1.2rem 0.5rem;
