@@ -1641,6 +1641,46 @@ img[src*="landingPage10.png"] {
   }
 }
 
+/* FAQ Section Styles */
+.faq-section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq {
+  margin-bottom: 1.5rem;
+}
+
+.faq h3 {
+  color: #003366;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Delivery Section Styles */
+.delivery-section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.delivery-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #003366;
+}
+
+.delivery-section p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .standalone-content {
@@ -1700,7 +1740,7 @@ img[src*="landingPage10.png"] {
 .blog-content {
   max-width: 800px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 100px 20px 0 20px;
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out 0.2s forwards;
   line-height: 1.8;
@@ -1767,7 +1807,7 @@ img[src*="landingPage10.png"] {
   
   .blog-content {
     margin: 30px auto;
-    padding: 0 15px;
+    padding: 90px 15px 0 15px;
   }
   
   .blog-content h1 {
